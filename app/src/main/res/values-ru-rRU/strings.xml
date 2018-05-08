@@ -1,0 +1,25 @@
+<resources>
+
+    <string name="app_name">Vote for us!</string>
+
+    <string name="prompt_email">Имя пользовавтела</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Вход </string>
+    <string name="invalid_credentials">Недопустимые учетные данные</string>
+
+    <string name="permissions_erorr_dialog_title">Разрешения не предоставляются</string>
+    <string name="permissions_error_dialog_message">Вы должны принять все необходимые разрешения</string>
+    <string name="ok">OK</string>
+
+    <string name="manage_user_button">Управление пользователями</string>
+    <string name="goot_maps_button">Карты</string>
+    <string name="hello_text">Привет</string>
+    <string name="last_login">Последний Войти</string>
+    <string name="role_text">Ваши разрешений</string>
+
+    <string name="action_settings" />
+    <string name="user_settings">Настройки аккаунта</string>
+    <string name="logout_action">Выйти</string>
+    <string name="back">Назад </string>
+    <string name="action_close">Закрыть приложение</string>
+</resources>

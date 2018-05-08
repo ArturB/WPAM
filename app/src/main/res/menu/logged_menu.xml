@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/action_back"
+        android:title="@string/back" />
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/application_settings"
+        android:title="@string/global_settings" />
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+          android:title="@string/user_settings" />
+
+    <item android:id="@+id/action_logout"
+        android:title="@string/logout_action" />
+
+</menu>

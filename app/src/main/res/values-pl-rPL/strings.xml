@@ -1,0 +1,96 @@
+<resources>
+
+    <!-- Global strings -->
+    <string name="app_name">Vote for us!</string>
+    <string name="warning_title">UWAGA</string>
+    <string name="error_title">BŁĄD</string>
+
+    <!-- AppBar Menu -->
+    <string name="action_settings" />
+    <string name="user_settings">Ustawienia konta</string>
+    <string name="logout_action">Wyloguj się</string>
+    <string name="back">Wstecz</string>
+    <string name="action_close">Zamknij aplikację</string>
+
+    <!-- LoginActivity -->
+    <string name="prompt_email">Nazwa użytkownika</string>
+    <string name="prompt_password">Hasło</string>
+    <string name="action_sign_in">Zaloguj się</string>
+    <string name="invalid_credentials">Niepoprawne dane logowania</string>
+    <string name="permissions_erorr_dialog_title">"Nie przyznano uprawnień</string>
+    <string name="permissions_error_dialog_message">Musisz zaakceptować wszystkie wymagane uprawnienia</string>
+    <string name="ok">OK</string>
+
+    <!-- DashboardActivity -->
+    <string name="manage_user_button">Zarządzaj użytkownikami</string>
+    <string name="goot_maps_button">Tryb mapy</string>
+    <string name="hello_text">Witaj</string>
+    <string name="last_login">Ostatnie logowanie</string>
+    <string name="role_text">Twoje uprawnienia</string>
+
+    <!-- EditUserActivity -->
+    <string name="username">Nazwa użytkownika</string>
+    <string name="password">Nowe hasło</string>
+    <string name="admin_privileges">Uprawnienia administratora</string>
+    <string name="apply">Zapisz ustawienia</string>
+    <string name="delete_user">Usuń użytkownika</string>
+    <string name="administrative_warning">Twoje uprawnienia administracyjne zostaną wyłączone</string>
+    <string name="settings_applied">Ustawienia pomyślnie zapisane</string>
+    <string name="edit_password_default">hasło</string>
+    <string name="title_confirm">POTWIERDZENIE</string>
+    <string name="retype_password">Potwierdź nowe hasło</string>
+    <string name="not_match_err">Hasła nie są zgodne</string>
+    <string name="users_manage_title">Użytkownicy</string>
+    <string name="add_user">Nowy użytkownik</string>
+    <string name="add_user_button">Dodaj</string>
+    <string name="user_exists">Taki użytkownik juz istnieje</string>
+    <string name="user_created">Utworzono nowego użytkownika</string>
+    <string name="remember_me">Zapamiętaj mnie</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="generate_info">Wygeneruj losowo zbiór wyborców, w określonym promieniu dookoła Twojego obecnego położenia</string>
+    <string name="voters_number">Liczba głosujących</string>
+    <string name="radius">Promień (km)</string>
+    <string name="generate_voters_button">Generuj</string>
+    <string name="goto_generate_voters">Generuj losową bazę wyborców</string>
+    <string name="delete_confirmation">Czy na pewno chcesz usunąć to konto</string>
+    <string name="yes_delete">Tak, usuń</string>
+    <string name="cancel">Anuluj</string>
+    <string name="info">INFO</string>
+    <string name="user_deleted">Użytkownik usunięty!</string>
+    <string name="select_voter">Wybierz osobę</string>
+    <string name="nonnegative_integers">Liczba głosujących i promień muszą być nieujemnymi iczbami całkowitymi</string>
+    <string name="voters_generated">Wygenerowano bazę</string>
+    <string name="generate_permissions">Aby wygenerować bazę, musisz mieć uprawnienia administratora</string>
+    <string name="voter_marker">wyborca</string>
+    <string name="voters_marker">wyborców</string>
+    <string name="openness_feature">Otwartość</string>
+    <string name="conscientiousness_feature">Sumienność</string>
+    <string name="no_known_voters">Tutaj nie ma żadnych rozpoznanych wyborców</string>
+    <string name="useful_resources">Przydatne zasoby</string>
+    <string name="extraversion_feature">Ekstrawersja</string>
+    <string name="agreeableness_feature">Ugodowość</string>
+    <string name="neuroticism_feature">Neurotyczność</string>
+    <string name="leadership_feature">Charyzma</string>
+    <string name="orientation_feature">Orientacja</string>
+    <string name="affiliation_feature">Afiliacja partyjna</string>
+    <string name="high">Wysoka</string>
+    <string name="medium">Przeciętna</string>
+    <string name="low">Niska</string>
+    <string name="heterosexual">Heteroseksualna</string>
+    <string name="homosexual">Homoseksualna</string>
+    <string name="bisexual">Biseksualna</string>
+    <string name="asexual">Aseksualna</string>
+    <string name="unknown">Nieznana</string>
+    <string name="years_old">l</string>
+    <string name="settings">Ustawienia</string>
+    <string name="datasource">Źródlo danych</string>
+    <string name="default_datasource">http://s2.brodzki.org</string>
+    <string name="proximity_thresholds">Progi podobieństwa</string>
+    <string name="low_proximity">Niskie podobieństwo</string>
+    <string name="high_proximity">Wysokie podobieństwo</string>
+    <string name="global_settings">Ustawienia globalne</string>
+    <string name="float_invalid">Należy wpisać poprawne wartości zmiennoprzecinkowe</string>
+    <string name="proximity_title">Podobieństwo z wyborcą</string>
+    <string name="invalid_percent">Procenty muszą być z przedziału 0..100</string>
+
+</resources>
