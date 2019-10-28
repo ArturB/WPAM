@@ -28,7 +28,7 @@ class PropagandaActivity : SignedInActivity() {
         leadership_textview.text        = "${getString(R.string.leadership_feature)}: ${featureName(voter.Leadership)}"
         orientation_textview.text       = "${getString(R.string.orientation_feature)}: ${orientationCode(voter.Orientation)}"
         affiliation_textview.text       = "${getString(R.string.affiliation_feature)}: ${voter.PoliticalAffiliation}"
-        summary_textview.text           = rule.Text
+        summary_textview.text           = "${getString(R.string.optimal_candidate)}: ${rule.Text}"
         proximity_text_view.text        = "${getString(R.string.proximity_title)}: ${Math.floor(100 - MarkerData.voterRuleDistance(voter, rule))}%"
 
     }

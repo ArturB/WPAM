@@ -92,5 +92,6 @@
     <string name="float_invalid">Należy wpisać poprawne wartości zmiennoprzecinkowe</string>
     <string name="proximity_title">Podobieństwo z wyborcą</string>
     <string name="invalid_percent">Procenty muszą być z przedziału 0..100</string>
+    <string name="optimal_candidate">Optymalny kandydat</string>
 
 </resources>

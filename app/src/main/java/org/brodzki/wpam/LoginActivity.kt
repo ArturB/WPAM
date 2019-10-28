@@ -56,6 +56,10 @@ class LoginActivity : VoteForUsActivity() {
         updateView()
     }
 
+    override fun onBackPressed() {
+
+    }
+
     private fun updateView() {
         rememberedUsername = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE).getString(REMEMBERED_USERNAME, "")
         rememberedPassword = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE).getString(REMEMBERED_PASSWORD, "")

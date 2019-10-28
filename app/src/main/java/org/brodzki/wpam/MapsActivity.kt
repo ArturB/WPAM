@@ -39,28 +39,33 @@ class MapsActivity : SignedInActivity(), OnMapReadyCallback {
      */
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        //checkPermissions()
-        setContentView(R.layout.activity_maps)
-        loggedUser = intent.extras.getSerializable(LOGGED_USER) as User
+        try {
+            super.onCreate(savedInstanceState)
+            //checkPermissions()
+            setContentView(R.layout.activity_maps)
+            loggedUser = intent.extras.getSerializable(LOGGED_USER) as User
 
-        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
+            mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
 
-        val mapFragment = supportFragmentManager
-                .findFragmentById(R.id.map) as SupportMapFragment
-        mapFragment.getMapAsync(this)
+            val mapFragment = supportFragmentManager
+                    .findFragmentById(R.id.map) as SupportMapFragment
+            mapFragment.getMapAsync(this)
 
-        //set buttons handlers
-        address_button.setOnClickListener { onCurrentAddressClicked() }
-        refresh_map_button.setOnClickListener {
-            updateLocation()
-            updateMarkers()
+            //set buttons handlers
+            address_button.setOnClickListener { onCurrentAddressClicked() }
+            refresh_map_button.setOnClickListener {
+                updateLocation()
+                updateMarkers()
+            }
+
+            //read rules
+            DAO(this).readRule("1", {
+                rules = it
+            }, {  })
+        } catch(e: Exception) {
+            showSimpleDialog(DialogType.ERROR, "onCreate error: ${e.message}")
         }
 
-        //read rules
-        DAO(this).readRule("1", {
-            rules = it
-        }, {  })
     }
 
     override fun onResume() {
@@ -84,7 +89,10 @@ class MapsActivity : SignedInActivity(), OnMapReadyCallback {
             }
         }
         catch(s: SecurityException) {
-            throw s
+            showSimpleDialog(DialogType.ERROR, "updateLocation security error: ${s.message}")
+        }
+        catch(e: Exception) {
+            showSimpleDialog(DialogType.ERROR, "updateLocation error: ${e.message}")
         }
     }
 
@@ -105,8 +113,12 @@ class MapsActivity : SignedInActivity(), OnMapReadyCallback {
             }
         }
         catch(s: SecurityException) {
-            throw s
+            showSimpleDialog(DialogType.ERROR, "updateCamera security error: ${s.message}")
         }
+        catch(e: Exception) {
+            showSimpleDialog(DialogType.ERROR, "updateCamera error: ${e.message}")
+        }
+
     }
 
     private fun updateMarkers() {
@@ -136,7 +148,10 @@ class MapsActivity : SignedInActivity(), OnMapReadyCallback {
             }, {  })
         }
         catch(s: SecurityException) {
-            throw s
+            showSimpleDialog(DialogType.ERROR, "updateMarkers security error: ${s.message}")
+        }
+        catch(e: Exception) {
+            showSimpleDialog(DialogType.ERROR, "updateMarkers error: ${e.message}")
         }
 
     }
@@ -151,10 +166,9 @@ class MapsActivity : SignedInActivity(), OnMapReadyCallback {
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
-        mMap = googleMap
-
-        // Add a marker in Sydney and move the camera
         try {
+            mMap = googleMap
+
             mMap.isMyLocationEnabled = true
             mMap.uiSettings.isMyLocationButtonEnabled = true
             mMap.uiSettings.isCompassEnabled = true
@@ -172,7 +186,7 @@ class MapsActivity : SignedInActivity(), OnMapReadyCallback {
 
         }
         catch(s: SecurityException) {
-            showSimpleDialog(DialogType.ERROR, s.message.toString())
+            showSimpleDialog(DialogType.ERROR, "onMapReady security error: ${s.message.toString()}")
         }
         catch(e: Exception) {
             showSimpleDialog(DialogType.ERROR, e.message.toString())

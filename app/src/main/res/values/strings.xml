@@ -91,5 +91,6 @@
     <string name="float_invalid">Thresholds must be valid float numbers!</string>
     <string name="proximity_title">Proximity</string>
     <string name="invalid_percent">Valid percents must be in range 0..100</string>
+    <string name="optimal_candidate">Optimal candidate</string>
 
 </resources>

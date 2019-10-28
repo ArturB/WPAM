@@ -32,7 +32,7 @@ class DashboardActivity : SignedInActivity() {
 
     override fun onResume() {
         super.onResume()
-        loggedUser = intent.extras.getSerializable(LOGGED_USER) as User
+        //loggedUser = intent.extras.getSerializable(LOGGED_USER) as User
         updateView()
     }
 

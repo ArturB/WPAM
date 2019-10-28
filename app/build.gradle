@@ -5,6 +5,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        Key {
+            keyAlias 'key0'
+            keyPassword 'Sh5, Hh5:, Gd4#'
+            storeFile file('C:/Users/Artur/GooglePlay/key.jks')
+            storePassword 'Sh5, Hh5:, Gd4#'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "org.brodzki.wpam"
